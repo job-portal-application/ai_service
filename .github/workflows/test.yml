@@ -19,7 +19,7 @@ jobs:
           fetch-depth: 0
 
       - name: Build Docker Image
-        run: docker build -t aiservice .
+        run: docker build -t ai-service .
 
       - name: Run Jest Tests inside Docker
         run: docker run --rm -v $PWD/coverage:/app/coverage ai-service npm run coverage
