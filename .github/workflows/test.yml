@@ -24,6 +24,6 @@ jobs:
         run: docker run --rm -v $PWD/coverage:/app/coverage ai-service npm run coverage
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v1
+        uses: SonarSource/sonarqube-scan-action@v5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
