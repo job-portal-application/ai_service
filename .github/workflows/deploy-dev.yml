@@ -1,4 +1,4 @@
-# Development deployment workflow
+# Development deployment workflow for AI service
 name: Development
 
 on:
