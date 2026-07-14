@@ -1,4 +1,4 @@
-# Production Deployment Workflow AI service
+# Production Deployment Workflow for AI service
 name: Production
 
 on:
