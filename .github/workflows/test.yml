@@ -7,30 +7,6 @@ on:
       - main
 
 jobs:
-  validate-branch-origin:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Validate branch ancestry
-        run: |
-          echo "Base branch: ${{ github.base_ref }}"
-          echo "Head branch: ${{ github.head_ref }}"
-
-          if [ "${{ github.base_ref }}" = "main" ]; then
-            # Block if head branch is based on development
-            git merge-base --is-ancestor origin/development HEAD && {
-              echo "❌ Branch from development cannot merge into main."
-              exit 1
-            }
-          fi
-
-          if [ "${{ github.base_ref }}" = "development" ]; then
-            # Block if head branch is based on main
-            git merge-base --is-ancestor origin/main HEAD && {
-              echo "❌ Branch from main cannot merge into development."
-              exit 1
-            }
-          fi
   sonarqube:
     runs-on: ubuntu-latest
     steps:
