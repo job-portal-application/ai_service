@@ -1,16 +1,16 @@
-# Development deployment workflow
-name: Development
+# Production Deployment Workflow
+name: Production
 
 on:
     push:
         branches:
-            - development
+            - main
 
 jobs:
     deploy:
         runs-on: ubuntu-latest
         environment:
-            name: development
+            name: production
 
         permissions:
             contents: read
