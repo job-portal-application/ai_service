@@ -10,7 +10,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         environment:
-            name: development
+            name: production
 
         permissions:
             contents: read
